@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background: linear-gradient(90deg, #13191a 1.18%, #000000 100%);
+  width: 650px;
+}
+
+.pokemon--name {
+  display: flex;
+  justify-content: center;
+  left: 50px;
+  color: white;
+  margin-top: 50px;
+}
+
+.pokemon--image {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+}
+
+body {
+  padding: 100px;
+}
+
+.button--stats {
+  font-family: 'Inter', sans-serif;
+  background: transparent;
+  border: none;
+  margin: 25px auto 0;
+  display: block;
+  font-size: 14px;
+  outline: none;
+  position: relative;
+  transition: 0.3s;
+  padding: 10px; /* the trick */
+  color: white;
+  margin-left: 40px;
+  left: 10px;
+  white-space: normal;
+  cursor: pointer;
+}
+
+
+.button--stats:hover {
+  color: #57bd84; /* change the color when the cursor hovers over the button */
+}
+
+.button--stats:before {
+  content: '';
+  border-bottom: 1px solid white;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  margin: 0 auto;
+  width: 0;
+  transition: 0.3s;
+}
+
+.button--stats:hover:before {
+ 
+  width: 100%;
+  padding: 0; /* the other part of the trick */
+  border-bottom: 1px solid #57bd84; /* change the color of the line under the button when the cursor hovers over it */
+}
+
+.button--stats:active {
+  background: white;
+  color: white;
+  transition: none;
+}
+
+.image--container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.button--container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.about--container--conditional {
+  position: absolute;
+  top: 470px; 
+  right: 835px;
   color: white;
+  font-size: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.button--stats--container {
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image--unknown {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+  margin-left: 30px;
 }
